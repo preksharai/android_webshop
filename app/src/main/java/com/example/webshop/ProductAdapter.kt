@@ -23,7 +23,7 @@ class ProductAdapter(val context:Context,var list:ArrayList<ProductModel>):Recyc
         {
             itemView.tv_name_prod.text=name
             itemView.tv_price_prod.text="Rs:${price.toString()}"
-            Picasso.with(itemView.context).load("http://192.168.1.6/images/"+image).into(itemView.prod_image)
+            Picasso.with(itemView.context).load("http://192.171.0.25/images/"+image).into(itemView.prod_image)
             itemView.addToCart.setOnClickListener {
                 UserInfo.productId=productId
 

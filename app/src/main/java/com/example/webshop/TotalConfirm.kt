@@ -34,7 +34,7 @@ class TotalConfirm : AppCompatActivity() {
         Log.e("bno","$bno")
 
         var rq: RequestQueue = Volley.newRequestQueue(this)
-        val url= "http://192.168.1.6/webshop/total_price.php?bill_no=$bno"
+        val url= "http://192.171.0.25/webshop/total_price.php?bill_no=$bno"
 
         //jb koi output ni aata, toh StringRequest hi create hoti h
         var sr= StringRequest(Request.Method.GET,url, Response.Listener { response ->

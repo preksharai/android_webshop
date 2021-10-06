@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
         var list2=ArrayList<String>()
         var email=intent.getStringExtra("email")
         var rq:RequestQueue= Volley.newRequestQueue(this)
-        var url2="http://192.168.1.6/webshop/getname.php?email=$email"
+        var url2="http://192.171.0.25/webshop/getname.php?email=$email"
         var jor=JsonObjectRequest(Request.Method.GET,url2,null,Response.Listener { response ->
             tv_hello.text="Hello "+response.getString("name")
 
@@ -34,7 +34,7 @@ class HomeActivity : AppCompatActivity() {
         rq.add(jor)
 
         var list=ArrayList<String>()
-        var url="http://192.168.1.6/webshop/getcategory.php"
+        var url="http://192.171.0.25/webshop/getcategory.php"
         var jar=JsonArrayRequest(Request.Method.GET,url,null,Response.Listener { response ->
             //here, reponse has json array
             for(x in 0..response.length()-1)

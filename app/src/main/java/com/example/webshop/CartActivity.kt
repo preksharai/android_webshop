@@ -24,7 +24,7 @@ class CartActivity : AppCompatActivity() {
         setContentView(R.layout.activity_cart)
 
         var rq: RequestQueue = Volley.newRequestQueue(this)
-        var url="http://192.168.1.6/webshop/get_temp_order.php?email="+UserInfo.email
+        var url="http://192.171.0.25/webshop/get_temp_order.php?email="+UserInfo.email
         var list=ArrayList<String>()
         var jar= JsonArrayRequest(Request.Method.GET,url,null,Response.Listener { response ->
             //here, reponse has json array
@@ -58,7 +58,7 @@ class CartActivity : AppCompatActivity() {
         {
             //means remove all orders
             var rq: RequestQueue = Volley.newRequestQueue(this)
-            var url="http://192.168.1.6/webshop/cancel_order.php?email="+UserInfo.email
+            var url="http://192.171.0.25/webshop/cancel_order.php?email="+UserInfo.email
             var sr=StringRequest(Request.Method.GET,url,Response.Listener { response ->
 
                 val intent=Intent(this,HomeActivity::class.java)
@@ -76,7 +76,7 @@ class CartActivity : AppCompatActivity() {
         {
             //del the details from temporary table and move then to the new table
             var rq: RequestQueue = Volley.newRequestQueue(this)
-            val url="http://192.168.1.6/webshop/confirm_order.php?email="+UserInfo.email
+            val url="http://192.171.0.25/webshop/confirm_order.php?email="+UserInfo.email
 
             //jb koi output ni aata, toh StringRequest hi create hoti h
             var sr=StringRequest(Request.Method.GET,url,Response.Listener { response ->

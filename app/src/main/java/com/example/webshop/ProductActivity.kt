@@ -19,7 +19,7 @@ class ProductActivity : AppCompatActivity() {
         var list=ArrayList<ProductModel>()
 
         var category:String?=intent.getStringExtra("category")
-        var url="http://192.168.1.6/webshop/getproducts.php?category=$category"
+        var url="http://192.171.0.25/webshop/getproducts.php?category=$category"
         var rq:RequestQueue= Volley.newRequestQueue(this)
         var jar=JsonArrayRequest(Request.Method.GET,url,null, Response.Listener { response->
 

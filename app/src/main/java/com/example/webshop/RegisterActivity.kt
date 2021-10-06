@@ -26,7 +26,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
                 else
                 {
-                    var url="http://192.168.1.6/webshop/adduser.php?name="+et_name.text+
+                    var url="http://192.171.0.25/webshop/adduser.php?name="+et_name.text+
                             "&email="+et_emailRegister.text+
                             "&mobile="+et_mobile.text+
                             "&address="+et_address.text+

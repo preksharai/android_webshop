@@ -29,7 +29,7 @@ class QuantityFragment : DialogFragment() {
 
         btn.setOnClickListener {
             var rq: RequestQueue = Volley.newRequestQueue(activity)
-            var url="http://192.168.1.6/webshop/add_temp_order.php?email="+UserInfo.email+
+            var url="http://192.171.0.25/webshop/add_temp_order.php?email="+UserInfo.email+
             "&productid="+UserInfo.productId+"&quantity="+et_qty.text.toString()
             var sr=StringRequest(Request.Method.GET,url,Response.Listener { response ->
 

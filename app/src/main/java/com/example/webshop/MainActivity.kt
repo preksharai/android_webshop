@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             }
             else
             {
-                var url="http://192.168.1.6/webshop/login.php?&email="+et_emaillogin.text+
+                var url="http://192.171.0.25/webshop/login.php?&email="+et_emaillogin.text+
                         "&password="+et_passwordlogin.text
 
                 //to connect to the web service file
